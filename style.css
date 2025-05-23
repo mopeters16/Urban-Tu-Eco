@@ -1,0 +1,117 @@
+/* Global Styles */
+:root {
+  --primary-green: #2ecc71;
+  --dark-green: #27ae60;
+  --black: #222;
+  --dark-black: #111;
+  --white: #f9f9f9;
+  --light-gray: #eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--dark-black);
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar p {
+  color: var(--white);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar p:hover {
+  background-color: var(--primary-green);
+  color: var(--dark-black);
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1 {
+  color: var(--dark-green);
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-black);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* PWA Install Prompt */
+#installContainer {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--dark-black);
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+}
+
+#installButton {
+  background: var(--primary-green);
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar p {
+    width: 100%;
+    text-align: center;
+    margin: 0.25rem 0;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}
