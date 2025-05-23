@@ -1,4 +1,4 @@
-const CACHE_NAME = 'street-committee-v1';
+const CACHE_NAME = 'street-committee-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -8,7 +8,11 @@ const urlsToCache = [
   '/contact.html',
   '/forum.html',
   '/guide.html',
-  '/list.html'
+  '/list.html',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png',
+  '/icons/apple-touch-icon.png',
+  '/manifest.json'
 ];
 
 self.addEventListener('install', event => {

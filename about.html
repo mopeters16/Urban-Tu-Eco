@@ -3,6 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- iOS specific -->
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="StreetCommittee">
+
+    <!-- Android/Universal -->
+    <link rel="icon" type="image/png" href="icons/icon-144x144.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="StreetCommittee">
+    <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#27ae60">
     <title>TheStreetCommittee</title>
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
@@ -10,13 +23,19 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <p onclick="window.location.href='index.html'">Home</p>
-        <p onclick="window.location.href='guide.html'">Guide</p>
-        <p onclick="window.location.href='forum.html'">Forum</p>
-        <p onclick="window.location.href='list.html'">To-Do</p>
-        <p onclick="window.location.href='contact.html'">Contact Us</p>
-        <p onclick="window.location.href='about.html'">About Us</p>
+   <div class="navbar">
+        <button class="menu-button" id="menuButton">
+            <span class="menu-icon"></span>
+            Menu
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <p onclick="window.location.href='index.html'">Home</p>
+            <p onclick="window.location.href='guide.html'">Guide</p>
+            <p onclick="window.location.href='forum.html'">Forum</p>
+            <p onclick="window.location.href='list.html'">To-Do</p>
+            <p onclick="window.location.href='contact.html'">Contact Us</p>
+            <p onclick="window.location.href='about.html'">About Us</p>
+        </div>
     </div>
 
     <main>
